@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "c": "minecraft:copper_ingot",
+    "h": "minecraft:copper_helmet",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "rcr",
+    "chc",
+    "rcr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "test:flyingcharm"
+  }
+}

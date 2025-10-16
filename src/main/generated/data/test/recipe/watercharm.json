@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "b": "minecraft:copper_boots",
+    "c": "minecraft:copper_ingot",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "rcr",
+    "cbc",
+    "rcr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "test:watercharm"
+  }
+}

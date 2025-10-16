@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "test",
+	"version": "1.0.0",
+	"name": "Copper Rework",
+	"description": "This is a small but overpowered Mod to make the Copper Armor more useful",
+	"authors": [
+		"AtlanticMGH"
+	],
+	"contact": {
+		"homepage": "https://github.com/AtlanticMGH",
+		"sources": "https://github.com/AtlanticMGH/CopperRework"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/test/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"atlanticmgh.test.CopperRework"
+		],
+        "client": [
+          "atlanticmgh.test.TestClientInitializer"
+        ],
+		"fabric-datagen": [
+			"atlanticmgh.test.TestDataGenerator"
+		]
+	},
+	"mixins": [
+		"test.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

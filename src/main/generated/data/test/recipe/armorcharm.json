@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "a": "minecraft:copper_chestplate",
+    "c": "minecraft:copper_ingot",
+    "n": "minecraft:nether_star"
+  },
+  "pattern": [
+    "aca",
+    "cnc",
+    "aca"
+  ],
+  "result": {
+    "count": 1,
+    "id": "test:armorcharm"
+  }
+}

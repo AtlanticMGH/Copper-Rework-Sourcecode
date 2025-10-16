@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "multi_bench",
+  "key": {
+    "c": "minecraft:copper_ingot",
+    "l": "minecraft:copper_leggings",
+    "r": "minecraft:redstone"
+  },
+  "pattern": [
+    "rcr",
+    "clc",
+    "rcr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "test:speedcharm"
+  }
+}

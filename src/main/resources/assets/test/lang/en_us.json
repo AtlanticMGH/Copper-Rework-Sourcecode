@@ -1,0 +1,15 @@
+{
+  "effect.test.fly": "Fly",
+  "effect.test.armor_undead_mob_debuff": "Armod Buff (Undead Mobs)",
+  "effect.test.armor_nether_mob_debuff": "Armod Buff (Nether Mobs)",
+  "effect.test.armor_physical_debuff": "Armod Buff (Physical)",
+  "item.test.flyingcharm": "Flyingcharm",
+  "item.test.watercharm": "Watercharm",
+  "item.test.armorcharm": "Armorcharm",
+  "item.test.speedcharm": "Speedcharm",
+  "physical_button": "Physical",
+  "undead_mobs_button": "Undead Mobs",
+  "nether_mobs_button": "Nether Mobs",
+  "piglin_mobs_button": "Piglins",
+  "armor_effect_text": "Armor Effect"
+}
