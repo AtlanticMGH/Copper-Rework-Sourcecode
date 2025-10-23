@@ -2,17 +2,15 @@ package atlanticmgh.test;
 
 import atlanticmgh.test.Items.ModItems;
 import atlanticmgh.test.effect.ModEffects;
+import atlanticmgh.test.network.ArmorCharmNetworking;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.DamageTypeTags;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,18 +23,10 @@ public class CopperRework implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+        ArmorCharmNetworking.registerCommon();
+        ArmorCharmNetworking.registerServer();
         ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
-            /*if(entity instanceof PlayerEntity player && !player.hasStatusEffect(ModEffects.ARMOR_PHYSICAL_DEBUFF)
-                && !player.hasStatusEffect(ModEffects.ARMOR_PIGLIN_MOB_DEBUFF)
-                && !player.hasStatusEffect(ModEffects.ARMOR_UNDEAD_MOB_DEBUFF)
-                && !player.hasStatusEffect(ModEffects.ARMOR_NETHER_MOB_DEBUFF)
-            ){
-                EntityAttributeInstance maxHealth = player.getAttributeInstance(EntityAttributes.MAX_HEALTH);
-                if (maxHealth != null) {
-                    maxHealth.setBaseValue(20);
-                }
-            }*/
+
             if (entity instanceof PlayerEntity player && player.hasStatusEffect(ModEffects.ARMOR_PHYSICAL_DEBUFF)) {
                 if (isPhysical(source, player)) {
                     return ActionResult.FAIL.isAccepted();

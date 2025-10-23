@@ -1,18 +1,16 @@
 package atlanticmgh.test.rendering;
 
 import atlanticmgh.test.Items.custom.ArmorCharmItem;
-import atlanticmgh.test.effect.ModEffects;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
+import atlanticmgh.test.network.ApplyEffectPayload;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
-
-import static net.minecraft.client.realms.task.LongRunningTask.setScreen;
 
 public class CustomScreen extends Screen {
 
@@ -26,25 +24,25 @@ public class CustomScreen extends Screen {
     @Override
     protected void init() {
         ButtonWidget physicalButton = ButtonWidget.builder(Text.translatable("physical_button"), (btn) -> {
-            ArmorCharmItem.setEffect("physical", player, hand);
+            ClientPlayNetworking.send(new ApplyEffectPayload("physical"));
             MinecraftClient.getInstance().setScreen(null);
         }).dimensions(this.width/4, 60 - this.textRenderer.fontHeight - 10, this.width/2, 20).build();
         this.addDrawableChild(physicalButton);
 
         ButtonWidget undeadMobButton = ButtonWidget.builder(Text.translatable("undead_mobs_button"), (btn) -> {
-            ArmorCharmItem.setEffect("undead_mob", player, hand);
+            ClientPlayNetworking.send(new ApplyEffectPayload("undead_mob"));
             MinecraftClient.getInstance().setScreen(null);
         }).dimensions(this.width/4, 90 - this.textRenderer.fontHeight - 10, this.width/2, 20).build();
         this.addDrawableChild(undeadMobButton);
 
         ButtonWidget netherMobButton = ButtonWidget.builder(Text.translatable("nether_mobs_button"), (btn) -> {
-            ArmorCharmItem.setEffect("nether_mob", player, hand);
+            ClientPlayNetworking.send(new ApplyEffectPayload("nether_mob"));
             MinecraftClient.getInstance().setScreen(null);
         }).dimensions(this.width/4, 120 - this.textRenderer.fontHeight - 10, this.width/2, 20).build();
         this.addDrawableChild(netherMobButton);
 
         ButtonWidget piglinMobButton = ButtonWidget.builder(Text.translatable("piglin_mobs_button"), (btn) -> {
-            ArmorCharmItem.setEffect("piglin_mob", player, hand);
+            ClientPlayNetworking.send(new ApplyEffectPayload("piglin_mob"));
             MinecraftClient.getInstance().setScreen(null);
         }).dimensions(this.width/4, 150 - this.textRenderer.fontHeight - 10, this.width/2, 20).build();
         this.addDrawableChild(piglinMobButton);

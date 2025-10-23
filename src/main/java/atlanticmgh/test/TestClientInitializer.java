@@ -1,5 +1,6 @@
 package atlanticmgh.test;
 
+import atlanticmgh.test.network.ArmorCharmNetworking;
 import atlanticmgh.test.rendering.CustomScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;

@@ -33,20 +33,8 @@ public class ModItems {
     public static final ArmorCharmItem ARMORCHARM = (ArmorCharmItem) register("armorcharm", ArmorCharmItem::new, new Item.Settings().maxCount(1).maxDamage(5).useCooldown(60));
     public static final SpeedCharmItem SPEEDCHARM = (SpeedCharmItem) register("speedcharm", SpeedCharmItem::new, new Item.Settings().maxCount(1).maxDamage(5).useCooldown(60));
 
-    public static final RegistryKey<ItemGroup> TEST_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(CopperRework.MOD_ID, "item_group"));
-    public static final ItemGroup TEST_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModItems.FLYINGCHARM))
-            .displayName(Text.translatable("Copper rework"))
-            .build();
-
     public static void initialize() {
-        Registry.register(Registries.ITEM_GROUP, TEST_ITEM_GROUP_KEY, TEST_ITEM_GROUP);
-        ItemGroupEvents.modifyEntriesEvent(TEST_ITEM_GROUP_KEY).register(itemGroup -> {
-            itemGroup.add(ModItems.FLYINGCHARM);
-            itemGroup.add(ModItems.WATERCHARM);
-            itemGroup.add(ModItems.ARMORCHARM);
-            itemGroup.add(ModItems.SPEEDCHARM);
-        });
+
     }
 
 }

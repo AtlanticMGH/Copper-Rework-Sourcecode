@@ -19,7 +19,8 @@
 			"atlanticmgh.test.CopperRework"
 		],
         "client": [
-          "atlanticmgh.test.TestClientInitializer"
+          "atlanticmgh.test.TestClientInitializer",
+          "atlanticmgh.test.Items.ModItemGroupsClient"
         ],
 		"fabric-datagen": [
 			"atlanticmgh.test.TestDataGenerator"
